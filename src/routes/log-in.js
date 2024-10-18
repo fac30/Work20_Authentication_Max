@@ -39,6 +39,8 @@ function post(req, res) {
     } else {
       return res.status(400).send("<h1>Login failed</h1>");
     }
+  }).catch(err => {
+    res.status(500).send("Server error");
   });
 }
 
